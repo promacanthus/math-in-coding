@@ -19,12 +19,10 @@ func combine(k int, teams, result []string) {
 		return
 	}
 
-	var restTeams, newResult []string
+	var newResult []string
 	for i := 0; i < len(teams); i++ {
 		newResult = make([]string, len(result)+1)
 		copy(newResult, result)
-		newResult[len(result)] = teams[i]
-		restTeams = teams[i+1:]
-		combine(k, restTeams, newResult)
+		combine(k, teams[i+1:], newResult)
 	}
 }
