@@ -273,7 +273,7 @@ func Test_flatten(t *testing.T) {
 func Test_insert(t *testing.T) {
 	ll := NewLinkList([]int{1, 2, 3, 5, 6, 7})
 	seven := ll.getNodeByValue(7)
-	seve.next = ll.head
+	seven.next = ll.head
 
 	type args struct {
 		head  *Node
