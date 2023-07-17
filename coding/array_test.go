@@ -36,13 +36,13 @@ func Test_twoSum(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := twoSumV1(tt.args.nums, tt.args.k); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("twoSum() = %v, want %v", got, tt.want)
+				t.Errorf("twoSumV1() = %v, want %v", got, tt.want)
 			}
 			if got := twoSumV2(tt.args.nums, tt.args.k); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("twoSum() = %v, want %v", got, tt.want)
+				t.Errorf("twoSumV2() = %v, want %v", got, tt.want)
 			}
 			if got := twoSumV3(tt.args.nums, tt.args.k); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("twoSum() = %v, want %v", got, tt.want)
+				t.Errorf("twoSumV3() = %v, want %v", got, tt.want)
 			}
 		})
 	}

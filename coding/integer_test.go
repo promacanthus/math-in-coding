@@ -109,13 +109,13 @@ func Test_countBits(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := countBitsV1(tt.args.n); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("countBits() = %v, want %v", got, tt.want)
+				t.Errorf("countBitsV1() = %v, want %v", got, tt.want)
 			}
 			if got := countBitsV2(tt.args.n); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("countBits() = %v, want %v", got, tt.want)
+				t.Errorf("countBitsV2() = %v, want %v", got, tt.want)
 			}
 			if got := countBitsV3(tt.args.n); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("countBits() = %v, want %v", got, tt.want)
+				t.Errorf("countBitsV3() = %v, want %v", got, tt.want)
 			}
 		})
 	}
@@ -172,7 +172,7 @@ func Test_maxProduct(t *testing.T) {
 				t.Errorf("maxProductV1() = %v, want %v", got, tt.want)
 			}
 			if got := maxProductV2(tt.args.words); got != tt.want {
-				t.Errorf("maxProductV1() = %v, want %v", got, tt.want)
+				t.Errorf("maxProductV2() = %v, want %v", got, tt.want)
 			}
 		})
 	}

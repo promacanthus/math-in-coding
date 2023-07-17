@@ -65,7 +65,7 @@ func Test_detectCycle(t *testing.T) {
 				t.Errorf("detectCycleV1() = %v, want %v", got, tt.want)
 			}
 			if got := detectCycleV2(tt.args.head); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("detectCycleV1() = %v, want %v", got, tt.want)
+				t.Errorf("detectCycleV2() = %v, want %v", got, tt.want)
 			}
 		})
 	}
@@ -102,17 +102,17 @@ func Test_getIntersectionNode(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := getIntersectionNodeV1(tt.args.a, tt.args.b); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("getIntersectionNode() = %v, want %v", got, tt.want)
+				t.Errorf("getIntersectionNodeV1() = %v, want %v", got, tt.want)
 			}
 			if got := getIntersectionNodeV2(tt.args.a, tt.args.b); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("getIntersectionNode() = %v, want %v", got, tt.want)
+				t.Errorf("getIntersectionNodeV2() = %v, want %v", got, tt.want)
 			}
 			if got := getIntersectionNodeV4(tt.args.a, tt.args.b); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("getIntersectionNode() = %v, want %v", got, tt.want)
+				t.Errorf("getIntersectionNodeV4() = %v, want %v", got, tt.want)
 			}
 			// 这个解法会形成环，最后一个测试
 			if got := getIntersectionNodeV3(tt.args.a, tt.args.b); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("getIntersectionNode() = %v, want %v", got, tt.want)
+				t.Errorf("getIntersectionNodeV4() = %v, want %v", got, tt.want)
 			}
 		})
 	}
