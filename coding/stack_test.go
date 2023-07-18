@@ -85,3 +85,68 @@ func Test_dailyTemperatures(t *testing.T) {
 		})
 	}
 }
+
+func Test_largestRectangleArea(t *testing.T) {
+	type args struct {
+		heights []int
+	}
+	tests := []struct {
+		name string
+		args args
+		want int
+	}{
+		// TODO: Add test cases.
+		{
+			name: "",
+			args: args{
+				heights: []int{3, 2, 5, 4, 6, 1, 4, 2},
+			},
+			want: 12,
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := largestRectangleAreaV1(tt.args.heights); got != tt.want {
+				t.Errorf("largestRectangleAreaV1() = %v, want %v", got, tt.want)
+			}
+			if got := largestRectangleAreaV2(tt.args.heights); got != tt.want {
+				t.Errorf("largestRectangleAreaV2() = %v, want %v", got, tt.want)
+			}
+			if got := largestRectangleAreaV3(tt.args.heights); got != tt.want {
+				t.Errorf("largestRectangleAreaV3() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+func Test_maximalRectangle(t *testing.T) {
+	type args struct {
+		matrix [][]int
+	}
+	tests := []struct {
+		name string
+		args args
+		want int
+	}{
+		// TODO: Add test cases.
+		{
+			name: "",
+			args: args{
+				matrix: [][]int{
+					{1, 0, 1, 0, 0},
+					{0, 0, 1, 1, 1},
+					{1, 1, 1, 1, 1},
+					{1, 0, 0, 1, 0},
+				},
+			},
+			want: 6,
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := maximalRectangle(tt.args.matrix); got != tt.want {
+				t.Errorf("maximalRectangle() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
